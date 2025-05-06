@@ -1,113 +1,170 @@
-<!DOCTYPE html><html lang="de">
+<!DOCTYPE html>
+<html lang="de">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0f172a">
+  <meta name="description" content="From2Hero - Deine Community für KI-Sicherheit. Schließe dich unserer Community an, um dein Wissen in KI-Sicherheit zu erweitern und praxisnahe Trainings zu erleben.">
+  <meta property="og:title" content="From2Hero - Deine Community für KI-Sicherheit">
+  <meta property="og:description" content="Von Null zum KI-Sicherheitshelden. Schließe dich unserer globalen Community an und werde Teil der Bewegung!">
+  <meta property="og:url" content="https://from2hero.de">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="/favicon.ico">
   <title>From2Hero - Deine Community für KI-Sicherheit</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    .glow { text-shadow: 0 0 8px rgba(125, 211, 252, 0.8); }
-    .btn-primary {
-      @apply bg-gradient-to-r from-blue-500 to-teal-400 hover:from-teal-400 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-2xl shadow-lg transition;
+    .glow {
+      text-shadow: 0 0 8px rgba(125, 211, 252, 0.8);
     }
-    .feature-icon { @apply w-12 h-12 text-teal-400; }
+    .btn-primary {
+      background: linear-gradient(to right, #3b82f6, #14b8a6);
+      color: #fff;
+      font-weight: bold;
+      padding: 0.75rem 1.5rem;
+      border-radius: 1rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: background 0.3s ease;
+    }
+    .btn-primary:hover {
+      background: linear-gradient(to right, #14b8a6, #3b82f6);
+    }
+    .feature-icon {
+      width: 3rem;
+      height: 3rem;
+      color: #14b8a6;
+    }
   </style>
 </head>
 <body class="bg-gray-900 text-gray-100 font-inter antialiased">
   <!-- Header -->
   <header class="sticky top-0 z-30 backdrop-blur bg-gray-800 bg-opacity-60 shadow-md">
     <div class="container mx-auto flex items-center justify-between py-4 px-6">
-      <h1 class="text-3xl font-bold glow">From<span class="text-teal-400">2</span>Hero</h1>
-      <nav>
+      <h1 class="text-3xl font-bold glow">
+        From<span class="text-teal-400">2</span>Hero
+      </h1>
+      <nav aria-label="Hauptnavigation">
         <ul class="flex space-x-6">
-          <li><a href="#mission" class="hover:text-teal-400">Mission</a></li>
-          <li><a href="#features" class="hover:text-teal-400">Vorteile</a></li>
-          <li><a href="#process" class="hover:text-teal-400">Ablauf</a></li>
-          <li><a href="#join" class="hover:text-teal-400">Mitmachen</a></li>
+          <li><a href="#mission" class="hover:text-teal-400 transition">Mission</a></li>
+          <li><a href="#features" class="hover:text-teal-400 transition">Vorteile</a></li>
+          <li><a href="#process" class="hover:text-teal-400 transition">Ablauf</a></li>
+          <li><a href="#join" class="hover:text-teal-400 transition">Mitmachen</a></li>
         </ul>
       </nav>
     </div>
-  </header>  <main class="container mx-auto px-6 py-12">
-    <!-- Hero -->
-    <section class="text-center mb-16">
-      <h2 class="text-4xl lg:text-5xl font-extrabold mb-4 glow">Von Null zum KI-Sicherheitshelden</h2>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="text-center py-16 px-6">
+      <h2 class="text-4xl lg:text-5xl font-extrabold mb-4 glow">
+        Von Null zum KI-Sicherheitshelden
+      </h2>
       <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
         Schließe dich unserer Community an, meistere praxisnahe Trainings und werde Teil einer globalen Bewegung gegen KI-Missbrauch.
       </p>
       <a href="#join" class="btn-primary">Jetzt kostenlos starten</a>
-    </section><!-- Mission -->
-<section id="mission" class="mb-20">
-  <h3 class="text-3xl font-semibold mb-6 glow text-center">Unsere Mission</h3>
-  <p class="text-gray-300 leading-relaxed max-w-3xl mx-auto">
-    From2Hero vereint ambitionierte Einsteiger und erfahrene Profis in einer interaktiven Plattform.
-    Wir bieten dir Schulungen, reale Challenges und Mentoring, damit du Schritt für Schritt zum White Hat “Hero” avancierst.
-    Gemeinsam schützen wir Unternehmen und Gesellschaft vor den Gefahren der KI-gestützten Cyberkriminalität.
-  </p>
-</section>
+    </section>
 
-<!-- Features -->
-<section id="features" class="mb-20">
-  <h3 class="text-3xl font-semibold mb-10 glow text-center">Was dich erwartet</h3>
-  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-    <div class="flex flex-col items-center text-center">
-      <svg class="feature-icon mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 8v4l3 3"/></svg>
-      <h4 class="font-semibold mb-2">Gamifizierte Lernpfade</h4>
-      <p class="text-gray-400">Schritt-für-Schritt-Module mit Abzeichen, Levels und Belohnungen.</p>
-    </div>
-    <div class="flex flex-col items-center text-center">
-      <svg class="feature-icon mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/></svg>
-      <h4 class="font-semibold mb-2">Community & Mentoring</h4>
-      <p class="text-gray-400">Tausche dich mit Experten aus und erhalte persönliches Coaching.</p>
-    </div>
-    <div class="flex flex-col items-center text-center">
-      <svg class="feature-icon mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M3 10h18M3 14h18"/></svg>
-      <h4 class="font-semibold mb-2">Praxisnahe Challenges</h4>
-      <p class="text-gray-400">Teste dein Wissen in realen Szenarien und Capture-the-Flag Wettbewerben.</p>
-    </div>
-    <div class="flex flex-col items-center text-center">
-      <svg class="feature-icon mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 2l4 4-4 4-4-4z"/></svg>
-      <h4 class="font-semibold mb-2">Zertifizierungen</h4>
-      <p class="text-gray-400">Offizielle Abschlusszertifikate für deinen Lebenslauf.</p>
-    </div>
-    <div class="flex flex-col items-center text-center">
-      <svg class="feature-icon mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M5 12h14"/></svg>
-      <h4 class="font-semibold mb-2">Networking</h4>
-      <p class="text-gray-400">Exklusive Events und Konferenzen mit Top-Unternehmen.</p>
-    </div>
-    <div class="flex flex-col items-center text-center">
-      <svg class="feature-icon mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/></svg>
-      <h4 class="font-semibold mb-2">Global Reach</h4>
-      <p class="text-gray-400">Werde Teil einer internationalen Community von Helden.</p>
-    </div>
-  </div>
-</section>
+    <!-- Mission Section -->
+    <section id="mission" class="py-16 px-6">
+      <h3 class="text-3xl font-semibold mb-6 glow text-center">Unsere Mission</h3>
+      <p class="text-gray-300 leading-relaxed max-w-3xl mx-auto">
+        From2Hero vereint ambitionierte Einsteiger und erfahrene Profis in einer interaktiven Plattform.
+        Wir bieten dir Schulungen, reale Challenges und Mentoring, damit du Schritt für Schritt zum White Hat „Hero“ avancierst.
+        Gemeinsam schützen wir Unternehmen und Gesellschaft vor den Gefahren der KI-gestützten Cyberkriminalität.
+      </p>
+    </section>
 
-<!-- Process -->
-<section id="process" class="mb-20 bg-gray-800 bg-opacity-50 backdrop-blur rounded-lg p-12">
-  <h3 class="text-3xl font-semibold mb-6 glow text-center">Dein Weg zum Hero</h3>
-  <ol class="list-decimal list-inside space-y-6 text-gray-300 max-w-2xl mx-auto">
-    <li><strong>Registrieren:</strong> In wenigen Sekunden Konto anlegen.</li>
-    <li><strong>Assessment:</strong> Kurzer kostenloser Eignungstest, um deinen Level zu bestimmen.</li>
-    <li><strong>Lernen & Erleben:</strong> Gamifizierte Module und CTF-Challenges starten.</li>
-    <li><strong>Mentoring:</strong> Live-Sessions mit erfahrenen Security-Profis.
-    <li><strong>Zertifizieren & Netzwerken:</strong> Offizielle Zertifikate sammeln und an Events teilnehmen.</li>
-  </ol>
-</section>
+    <!-- Features Section -->
+    <section id="features" class="py-16 px-6 bg-gray-800 bg-opacity-50 rounded-lg">
+      <h3 class="text-3xl font-semibold mb-10 glow text-center">Was dich erwartet</h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 max-w-6xl mx-auto">
+        <div class="flex flex-col items-center text-center">
+          <svg class="feature-icon mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path d="M12 8v4l3 3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <h4 class="font-semibold mb-2">Gamifizierte Lernpfade</h4>
+          <p class="text-gray-400">Schritt-für-Schritt-Module mit Abzeichen, Levels und Belohnungen.</p>
+        </div>
+        <div class="flex flex-col items-center text-center">
+          <svg class="feature-icon mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <h4 class="font-semibold mb-2">Community & Mentoring</h4>
+          <p class="text-gray-400">Tausche dich mit Experten aus und erhalte persönliches Coaching.</p>
+        </div>
+        <div class="flex flex-col items-center text-center">
+          <svg class="feature-icon mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path d="M3 10h18M3 14h18" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <h4 class="font-semibold mb-2">Praxisnahe Challenges</h4>
+          <p class="text-gray-400">Teste dein Wissen in realen Szenarien und Capture-the-Flag Wettbewerben.</p>
+        </div>
+        <div class="flex flex-col items-center text-center">
+          <svg class="feature-icon mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path d="M12 2l4 4-4 4-4-4z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <h4 class="font-semibold mb-2">Zertifizierungen</h4>
+          <p class="text-gray-400">Offizielle Abschlusszertifikate für deinen Lebenslauf.</p>
+        </div>
+        <div class="flex flex-col items-center text-center">
+          <svg class="feature-icon mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path d="M5 12h14" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <h4 class="font-semibold mb-2">Networking</h4>
+          <p class="text-gray-400">Exklusive Events und Konferenzen mit Top-Unternehmen.</p>
+        </div>
+        <div class="flex flex-col items-center text-center">
+          <svg class="feature-icon mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path d="M4 4h16v16H4z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <h4 class="font-semibold mb-2">Global Reach</h4>
+          <p class="text-gray-400">Werde Teil einer internationalen Community von Helden.</p>
+        </div>
+      </div>
+    </section>
 
-<!-- CTA -->
-<section id="join" class="text-center py-12">
-  <h3 class="text-3xl font-semibold mb-4 glow">Bereit für deine Verwandlung?</h3>
-  <p class="text-gray-300 mb-8">Werde Teil von From2Hero und starte deine Reise in die Welt der KI-Sicherheit.</p>
-  <a href="/signup" class="btn-primary">Jetzt kostenlos beitreten</a>
-</section>
+    <!-- Process Section -->
+    <section id="process" class="py-16 px-6">
+      <h3 class="text-3xl font-semibold mb-6 glow text-center">Dein Weg zum Hero</h3>
+      <ol class="list-decimal list-inside space-y-6 text-gray-300 max-w-2xl mx-auto">
+        <li>
+          <strong>Registrieren:</strong> In wenigen Sekunden ein Konto anlegen.
+        </li>
+        <li>
+          <strong>Assessment:</strong> Ein kurzer, kostenloser Eignungstest bestimmt dein Level.
+        </li>
+        <li>
+          <strong>Lernen & Erleben:</strong> Starte gamifizierte Module und CTF-Challenges.
+        </li>
+        <li>
+          <strong>Mentoring:</strong> Nimm an Live-Sessions mit erfahrenen Security-Profis teil.
+        </li>
+        <li>
+          <strong>Zertifizieren & Netzwerken:</strong> Sammle offizielle Zertifikate und profitiere von exklusiven Events.
+        </li>
+      </ol>
+    </section>
 
-  </main>  <!-- Footer -->  <footer class="bg-gray-800 bg-opacity-60 backdrop-blur py-6 mt-12">
+    <!-- Call-to-Action Section -->
+    <section id="join" class="text-center py-16 px-6 bg-gray-800 bg-opacity-50 rounded-lg">
+      <h3 class="text-3xl font-semibold mb-4 glow">Bereit für deine Verwandlung?</h3>
+      <p class="text-gray-300 mb-8 max-w-xl mx-auto">
+        Werde Teil von From2Hero und starte deine Reise in die faszinierende Welt der KI-Sicherheit.
+      </p>
+      <a href="/signup" class="btn-primary">Jetzt kostenlos beitreten</a>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 bg-opacity-60 backdrop-blur py-6">
     <div class="container mx-auto text-center text-gray-400 space-y-2">
       <p>&copy; 2025 From2Hero. Alle Rechte vorbehalten.</p>
       <div class="flex justify-center space-x-4">
-        <a href="/impressum" class="hover:text-teal-300">Impressum</a>
-        <a href="/datenschutz" class="hover:text-teal-300">Datenschutz</a>
-        <a href="/kontakt" class="hover:text-teal-300">Kontakt</a>
+        <a href="/impressum" class="hover:text-teal-300 transition">Impressum</a>
+        <a href="/datenschutz" class="hover:text-teal-300 transition">Datenschutz</a>
+        <a href="/kontakt" class="300 transition">Kontakt</a>
       </div>
     </div>
   </footer>

@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KI-Sicherheitsverteidiger</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* Custom styles for glowing text and modern UI - Wird in <head> platziert */
+      .glowing-text {
+        text-shadow: 0 0 8px rgba(125, 211, 252, 0.8); /* Hellblaues Leuchten */
+      }
+      .input-error {
+        border-color: #f87171; /* Rotes Border */
+        background-color: #fee2e2; /* Helleres Rot für Hintergrund */
+        color: #b91c1c;
+      }
+      .input-error::placeholder {
+        color: #fecaca; /* Noch helleres Rot für Platzhaltertext */
+      }
+    </style>
+</head>
+<body class="bg-gray-900 text-white font-inter">
+    <header class="bg-gray-800 bg-opacity-50 backdrop-blur-md py-4 px-6 rounded-b-lg shadow-md sticky top-0 z-10">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold glowing-text">KI-Sicherheitsverteidiger</h1>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="#mission" class="hover:text-blue-400 transition duration-300">Mission</a></li>
+                    <li><a href="#test" class="hover:text-blue-400 transition duration-300">Test</a></li>
+                    <li><a href="#anforderungen" class="hover:text-blue-400 transition duration-300">Anforderungen</a></li>
+                    <li><a href="#community" class="hover:text-blue-400 transition duration-300">Community</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-10">
+        <section id="mission" class="mb-16">
+            <h2 class="text-3xl font-semibold text-center mb-8 glowing-text">Unsere Mission</h2>
+            <p class="text-lg text-gray-300 leading-relaxed">
+                In einer zunehmend digitalisierten Welt bedrohen bösartige Akteure die Sicherheit und Integrität unserer Gesellschaft.
+                Insbesondere der Missbrauch von Künstlicher Intelligenz durch Black Hat Hacker stellt eine wachsende Gefahr dar.
+                Unsere Mission ist es, eine Elite-Community von White Hat Hackern aufzubauen, die sich der Abwehr dieser Bedrohungen widmet.
+                Wir schützen Individuen, Organisationen und die Gesellschaft als Ganzes vor den verheerenden Auswirkungen von KI-gestützter Internetkriminalität.
+                Unser Ziel ist es, das weltweit führende Kompetenzzentrum für KI-Sicherheit zu werden und innovative Lösungen zu entwickeln,
+                um den Missbrauch von KI zu verhindern und die Täter zur Rechenschaft zu ziehen.
+            </p>
+        </section>
+
+        <section id="test" class="mb-16">
+            <h2 class="text-3xl font-semibold text-center mb-8 glowing-text">Beweise Dein Können: Der Rekrutierungstest</h2>
+            <p class="text-lg text-gray-300 leading-relaxed mb-6">
+                Um sicherzustellen, dass wir nur die Besten der Besten in unserer Community haben, haben wir einen anspruchsvollen Test entwickelt.
+                Dieser Test zielt darauf ab, Ihr Wissen und Ihre Fähigkeiten in den Bereichen Cybersicherheit, KI und ethisches Hacken zu bewerten.
+                Nehmen Sie an diesem Test teil, um Ihre Eignung unter Beweis zu stellen und sich die Chance zu sichern, Teil unserer Elite-Truppe zu werden.
+            </p>
+
+            <div id="test-container" class="bg-gray-800 bg-opacity-50 backdrop-blur-md rounded-lg p-6 shadow-lg">
+                <form id="hacker-test-form" class="space-y-6">
+                    <div class="question-container">
+                        <label for="q1" class="block text-lg font-medium text-gray-200 mb-2">Frage 1: Welcher der folgenden Algorithmen wird am häufigsten für generative KI-Modelle verwendet, die für Deepfakes missbraucht werden können?</label>
+                        <select id="q1" name="q1" required class="bg-gray-700 border border-gray-600 text-white text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+                            <option value="" disabled selected>Wähle eine Option</option>
+                            <option value="a">Support Vector Machine (SVM)</option>
+                            <option value="b">Generative Adversarial Network (GAN)</option>
+                            <option value="c">K-Means Clustering</option>
+                            <option value="d">Lineare Regression</option>
+                        </select>
+                        <p id="q1-explanation" class="mt-2 text-gray-400"></p>
+                    </div>
+
+                    <div class="question-container">
+                        <label for="q2" class="block text-lg font-medium text-gray-200 mb-2">Frage 2: Eine Organisation bemerkt einen ungewöhnlichen Anstieg des ausgehenden Netzwerkverkehrs zu unbekannten internationalen Zielen. Welcher der folgenden Angriffe ist die wahrscheinlichste Ursache?</label>
+                        <select id="q2" name="q2" required class="bg-gray-700 border border-gray-600 text-white text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+                            <option value="" disabled selected>Wähle eine Option</option>
+                            <option value="a">Denial of Service (DoS)</option>
+                            <option value="b">Man-in-the-Middle (MitM)</option>
+                            <option value="c">Datenexfiltration</option>
+                            <option value="d">SQL-Injection</option>
+                        </select>
+                        <p id="q2-explanation" class="mt-2 text-gray-400"></p>
+                    </div>
+
+                    <div class="question-container">
+                        <label for="q3" class="block text-lg font-medium text-gray-200 mb-2">Frage 3: Welches der folgenden Prinzipien ist KEIN Kernprinzip des ethischen Hackings?</label>
+                        <select id="q3" name="q3" required class="bg-gray-700 border border-gray-600 text-white text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+                            <option value="" disabled selected>Wähle eine Option</option>
+                            <option value="a">Zustimmung einholen</option>
+                            <option value="b">Schaden vermeiden</option>
+                            <option value="c">Vertraulichkeit wahren</option>
+                            <option value="d">Öffentliche Bloßstellung von Schwachstellen</option>
+                        </select>
+                        <p id="q3-explanation" class="mt-2 text-gray-400"></p>
+                    </div>
+
+                    <div class="question-container">
+                        <label for="q4" class="block text-lg font-medium text-gray-200 mb-2">Frage 4: Wie können KI-Modelle dazu missbraucht werden, Social-Engineering-Angriffe zu verstärken?</label>
+                        <select id="q4" name="q4" required class="bg-gray-700 border border-gray-600 text-white text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+                            <option value="" disabled selected>Wähle eine Option</option>
+                            <option value="a">Durchführung von DDoS-Angriffen</option>
+                            <option value="b">Automatisierung von Phishing-Kampagnen mit personalisierten Nachrichten</option>
+                            <option value="c">Entschlüsselung von Passwörtern</option>
+                            <option value="d">Manipulation von Hardware</option>
+                        </select>
+                        <p id="q4-explanation" class="mt-2 text-gray-400"></p>
+                    </div>
+
+                    <div class="question-container">
+                        <label for="q5" class="block text-lg font-medium text-gray-200 mb-2">Frage 5: Welches Tool ist am besten geeignet, um Schwachstellen in Webanwendungen zu finden?</label>
+                        <select id="q5" name="q5" required class="bg-gray-700 border border-gray-600 text-white text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+                            <option value="" disabled selected>Wähle eine Option</option>
+                            <option value="a">Nmap</option>
+                            <option value="b">Wireshark</option>
+                            <option value="c">Burp Suite</option>
+                            <option value="d">Metasploit Framework</option>
+                        </select>
+                        <p id="q5-explanation" class="mt-2 text-gray-400"></p>
+                    </div>
+
+                    <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg focus:outline-none focus:shadow-outline">
+                        Ergebnis Auswerten
+                    </button>
+                </form>
+
+                <div id="result-container" class="hidden mt-8 bg-gray-700 bg-opacity-50 backdrop-blur-md rounded-lg p-6 shadow-lg">
+                    <h3 class="text-2xl font-semibold text-center mb-4 text-green-400">Testergebnis</h3>
+                    <p id="final-score" class="text-lg text-center mb-4"></p>
+                    <p id="test-feedback" class="text-lg text-center mb-4 font-medium"></p>
+                    <div id="restart-test" class="flex justify-center mt-4">
+                        <button class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded-lg focus:outline-none focus:shadow-outline">
+                            Test erneut versuchen
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="anforderungen" class="mb-16">
+            <h2 class="text-3xl font-semibold text-center mb-8 glowing-text">Werde Teil unserer Elite: Die Anforderungen</h2>
+            <p class="text-lg text-gray-300 leading-relaxed mb-6">
+                Wir suchen nach außergewöhnlichen Talenten mit einer Leidenschaft für Cybersicherheit und dem unerschütterlichen Willen,
+                die Welt vor den Gefahren des KI-Missbrauchs zu schützen.  Die Anforderungen sind hoch, aber die Belohnung,
+                Teil einer Elite-Community zu sein, die einen echten Unterschied macht, ist unermesslich.
+            </p>
+            <ul class="list-disc list-inside space-y-3 text-gray-300">
+                <li><strong>Fundiertes Wissen:</strong> Umfassendes Verständnis von Cybersicherheit, Netzwerken und Betriebssystemen.</li>
+                <li><strong>KI-Expertise:</strong> Tiefes Verständnis von Machine Learning, Deep Learning und KI-Sicherheit.</li>
+                <li><strong>Ethisches Hacken:</strong> Nachweisliche Fähigkeiten im ethischen Hacken und Penetration Testing.</li>
+                <li><strong>Programmierkenntnisse:</strong> Beherrschung von mindestens zwei Programmiersprachen, vorzugsweise Python, Java oder C++.</li>
+                <li><strong>Problemlösung:</strong> Außergewöhnliche analytische und Problemlösungsfähigkeiten.</li>
+                <li><strong>Teamfähigkeit:</strong> Fähigkeit, effektiv in einem Team zu arbeiten und Wissen zu teilen.</li>
+                <li><strong>Kommunikationsfähigkeit:</strong> Hervorragende schriftliche und mündliche Kommunikationsfähigkeiten.</li>
+                <li><strong>Engagement für Ethik:</strong> Unerschütterliches Engagement für ethisches Verhalten und die Bekämpfung von Internetkriminalität.</li>
+                <li><strong>Zertifizierungen:</strong> Relevante Zertifizierungen wie OSCP, CISSP, CEH sind von Vorteil.</li>
+                <li><strong>Erfahrung:</strong> Mindestens 5 Jahre Erfahrung im Bereich der Cybersicherheit.</li>
+            </ul>
+            <p class="text-lg text-gray-300 leading-relaxed mt-6">
+                Erfüllen Sie diese anspruchsvollen Kriterien? Dann laden wir Sie ein, sich unserem Team anzuschließen und mit uns
+                gemeinsam die Zukunft der KI-Sicherheit zu gestalten.
+            </p>
+        </section>
+
+        <section id="community" class="mb-16">
+            <h2 class="text-3xl font-semibold text-center mb-8 glowing-text">Werde Teil der Bewegung: Unsere Community</h2>
+            <p class="text-lg text-gray-300 leading-relaxed mb-6">
+                Die KI-Sicherheitsverteidiger sind mehr als nur eine Gruppe von Hackern – wir sind eine Familie.
+                Wir sind eine Gemeinschaft von Gleichgesinnten, die durch ein gemeinsames Ziel vereint sind:
+                die Welt vor den Gefahren des KI-Missbrauchs zu schützen.  Als Mitglied unserer Community erhalten Sie:
+            </p>
+            <ul class="list-disc list-inside space-y-3 text-gray-300">
+                <li><strong>Zugang zu Expertenwissen:</strong> Lernen Sie von den Besten der Branche durch exklusive Schulungen und Workshops.</li>
+                <li><strong>Neueste Informationen:</strong> Bleiben Sie auf dem Laufenden über die neuesten Bedrohungen und Abwehrmechanismen im Bereich der KI-Sicherheit.</li>
+                <li><strong>Karriereentwicklung:</strong> Erweitern Sie Ihre Fähigkeiten und bauen Sie Ihr Netzwerk durch Mentoring-Programme und Karrieremöglichkeiten aus.</li>
+                <li><strong>Kollaborative Projekte:</strong> Arbeiten Sie mit anderen Mitgliedern an spannenden Projekten und tragen Sie zur Entwicklung innovativer Lösungen bei.</li>
+                <li><strong>Globale Vernetzung:</strong> Treffen Sie sich mit anderen Experten aus der ganzen Welt auf Konferenzen und Community-Veranstaltungen.</li>
+                <li><strong>Beitrag zur Gesellschaft:</strong> Leisten Sie einen bedeutenden Beitrag zum Schutz unserer Gesellschaft vor den Gefahren des KI-Missbrauchs.</li>
+            </ul>
+            <p class="text-lg text-gray-300 leading-relaxed mt-6">
+                Werden Sie Teil einer Bewegung, die einen echten Unterschied macht.  Gemeinsam können wir die Zukunft der KI-Sicherheit gestalten
+                und eine Welt schaffen, in der KI zum Wohl der Menschheit eingesetzt wird.
+            </p>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 bg-opacity-50 backdrop-blur-md py-4 px-6 rounded-t-lg shadow-md">
+        <div class="container mx-auto text-center text-gray-400">
+            <p>&copy; 2024 KI-Sicherheitsverteidiger. Alle Rechte vorbehalten.</p>
+            <p>
+                <a href="https://www.example.com/impressum" class="hover:text-blue-400 transition duration-300">Impressum</a> |
+                <a href="https://www.example.com/datenschutz" class="hover:text-blue-400 transition duration-300">Datenschutz</a> |
+                <a href="https://www.example.com/kontakt" class="hover:text-blue-400 transition duration-300">Kontakt</a>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Get references to the form and result elements
+        const testForm = document.getElementById('hacker-test-form');
+        const resultContainer = document.getElementById('result-container');
+        const finalScoreDisplay = document.getElementById('final-score');
+        const testFeedback = document.getElementById('test-feedback');
+        const restartTestButton = resultContainer.querySelector('button');
+        const questionContainers = document.querySelectorAll('.question-container');
+
+
+        // Define the correct answers and their explanations
+        const correctAnswers = {
+            q1: 'b',
+            q2: 'c',
+            q3: 'd',
+            q4: 'b',
+            q5: 'c'
+        };
+
+        const answerExplanations = {
+            q1: {
+                a: "Falsch. SVMs werden für Klassifizierung, nicht für generative Modelle verwendet.",
+                b: "Richtig. GANs sind bekannt für ihre Fähigkeit, realistische Daten zu generieren und werden häufig für Deepfakes missbraucht.",
+                c: "Falsch. K-Means ist ein Clustering-Algorithmus, nicht für generative Modelle.",
+                d: "Falsch. Lineare Regression wird für Vorhersagen, nicht für generative Modelle verwendet."
+            },
+            q2: {
+                a: "Falsch. DoS-Angriffe zielen darauf ab, die Verfügbarkeit eines Dienstes zu beeinträchtigen, nicht auf Datenexfiltration.",
+                b: "Falsch. MitM-Angriffe ermöglichen das Abhören von Kommunikation, aber nicht unbedingt die Exfiltration großer Datenmengen.",
+                c: "Richtig. Ein Anstieg des ausgehenden Netzwerkverkehrs zu unbekannten Zielen deutet stark auf Datenexfiltration hin.",
+                d: "Falsch. SQL-Injection zielt auf Datenbanken ab, nicht auf den allgemeinen Netzwerkverkehr."
+            },
+            q3: {
+                a: "Falsch. Das Einholen der Zustimmung ist ein grundlegendes Prinzip des ethischen Hackings.",
+                b: "Falsch. Die Vermeidung von Schäden ist ein Kernprinzip.",
+                c: "Falsch. Vertraulichkeit ist wichtig, um sensible Informationen zu schützen.",
+                d: "Richtig. Die öffentliche Bloßstellung von Schwachstellen ohne angemessene Offenlegung ist unethisch und kann ausgenutzt werden."
+            },
+            q4: {
+                a: "Falsch. DDoS-Angriffe haben nichts mit der Manipulation von Social-Engineering-Angriffen zu tun.",
+                b: "Richtig. KI kann verwendet werden, um überzeugende, personalisierte Nachrichten zu erstellen, die die Effektivität von Phishing-Angriffen erhöhen.",
+                c: "Falsch. KI kann beim Knacken von Passwörtern helfen, aber das ist nicht der Hauptfokus bei Social Engineering.",
+                d: "Falsch. Die Manipulation von Hardware ist kein typisches Einsatzgebiet von KI im Social Engineering."
+            },
+            q5: {
+                a: "Falsch. Nmap ist ein Netzwerk-Scanner, kein spezialisiertes Tool für Webanwendungsschwachstellen.",
+                b: "Falsch. Wireshark ist ein Netzwerk-Protokollanalysator.",
+                c: "Richtig. Burp Suite ist ein umfassendes Tool für das Testen der Sicherheit von Webanwendungen.",
+                d: "Falsch. Metasploit ist ein Framework für Penetrationstests, aber nicht speziell für das Auffinden von Webanwendungsschwachstellen."
+            }
+        };
+
+        // Function to calculate the score and provide feedback
+        function calculateScore(answers) {
+            let score = 0;
+            const maxScore = Object.keys(correctAnswers).length;
+            const correctCount = Object.values(answers).filter((answer, index) => answer === Object.values(correctAnswers)[index]).length;
+            score = (correctCount / maxScore) * 100;
+            return { score: score, correctCount: correctCount, maxScore: maxScore };
+        }
+
+        // Function to display the results
+        function displayResults(scoreData) {
+            finalScoreDisplay.textContent = `Dein Ergebnis: ${scoreData.correctCount} von ${scoreData.maxScore} Punkten (${scoreData.score.toFixed(2)}%)`;
+            if (scoreData.score >= 80) {
+                testFeedback.textContent = "Herzlichen Glückwunsch! Du hast den Test bestanden und bist einen Schritt näher daran, ein KI-Sicherheitsverteidiger zu werden.";
+                testFeedback.classList.remove('text-red-500');
+                testFeedback.classList.add('text-green-400');
+            } else {
+                testFeedback.textContent = "Leider hast du den Test nicht bestanden.  Wir empfehlen dir, deine Kenntnisse in den Bereichen KI-Sicherheit und ethisches Hacken zu vertiefen und es erneut zu versuchen.";
+                testFeedback.classList.remove('text-green-400');
+                testFeedback.classList.add('text-red-500');
+            }
+            resultContainer.classList.remove('hidden');
+        }
+
+        function explainAnswers(answers) {
+            questionContainers.forEach(container => {
+                const questionId = container.querySelector('select').id;
+                const selectedAnswer = answers[questionId];
+                const explanationElement = container.querySelector('p');
+
+                if (selectedAnswer) {
+                    explanationElement.textContent = answerExplanations[questionId][selectedAnswer];
+                    if (selectedAnswer === correctAnswers[questionId]) {
+                        explanationElement.classList.remove('text-red-500');
+                        explanationElement.classList.add('text-green-400');
+                    } else {
+                        explanationElement.classList.remove('text-green-400');
+                        explanationElement.classList.add('text-red-500');
+                    }
+                } else {
+                    explanationElement.textContent = ''; // Clear previous explanations
+                }
+            });
+        }
+
+        // Event listener for the form submission
+        testForm.addEventListener('submit', (event) => {
+            event.preventDefault();
+
+            const userAnswers = {};
+            const formData = new FormData(testForm);
+            for (let [name, value] of formData.entries()) {
+                userAnswers[name] = value;
+            }
+
+            const scoreData = calculateScore(userAnswers);
+            explainAnswers(userAnswers); // Show explanations
+            displayResults(scoreData);
+        });
+
+        // Event listener for the restart button
+        restartTestButton.addEventListener('click', () => {
+            testForm.reset();
+            resultContainer.classList.add('hidden');
+            questionContainers.forEach(container => {
+                const explanationElement = container.querySelector('p');
+                explanationElement.textContent = ''; // Clear explanations
+            });
+        });
+    </script>
+</body>
+</html>
+
